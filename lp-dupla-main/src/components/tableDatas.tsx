@@ -2,10 +2,11 @@
 import { useState, useEffect } from "react";
 import { MdDelete } from "react-icons/md";
 import { MdOutlineEdit } from "react-icons/md";
+import { useDataContext } from "@/contexts/dataContext";
 
 interface Data {
   id: number;
-  day: string;
+  day: string | number;
   month: string;
   location: string;
   city: string;
@@ -15,6 +16,7 @@ interface Data {
 const API_BASE_URL = 'http://localhost:3000/api';
 
 export const TableDatas = () => {
+  const { onDataChange } = useDataContext();
   const [data, setData] = useState<Data[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -22,26 +24,20 @@ export const TableDatas = () => {
   const [editForm, setEditForm] = useState<Partial<Data>>({});
   const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
-  // Debug: Estado atual
-  console.log('TableDatas - Loading:', loading, 'Error:', error, 'Data length:', data.length);
+
 
   const fetchData = async () => {
-    console.log('TableDatas fetchData iniciado');
-    
     try {
       const response = await fetch(`${API_BASE_URL}/data`);
-      console.log('Response status:', response.status);
       
       if (!response.ok) {
         throw new Error('Falha ao carregar dados');
       }
       
       const result = await response.json();
-      console.log('Dados recebidos:', result.length, 'eventos');
       
       setData(result);
     } catch (err) {
-      console.error('Erro fetchData:', err);
       setError(err instanceof Error ? err.message : 'Erro desconhecido');
     } finally {
       setLoading(false);
@@ -49,9 +45,12 @@ export const TableDatas = () => {
   };
 
   useEffect(() => {
-    console.log('🚀 TableDatas montado - executando fetchData');
     fetchData();
-  }, []);
+    // Registra callback para atualizar quando dados mudarem
+    onDataChange(() => {
+      fetchData();
+    });
+  }, [onDataChange]);
 
   const handleEdit = (item: Data) => {
     setEditingId(item.id);

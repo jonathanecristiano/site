@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
+import { useDataContext } from "@/contexts/dataContext";
 
 const API_BASE_URL = 'http://localhost:3000/api';
 
 export const FormDataAPI = () => {
+  const { triggerRefresh } = useDataContext();
   const [formData, setFormData] = useState({
     day: "",
     month: "",
@@ -60,6 +62,8 @@ export const FormDataAPI = () => {
         onlineTicket: false,
         buyLink: "",
       });
+      // Notifica outros componentes para atualizar os dados
+      triggerRefresh();
     } catch (error) {
       setMessage({ 
         type: 'error', 

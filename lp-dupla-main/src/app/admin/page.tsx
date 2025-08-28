@@ -7,8 +7,7 @@ import Image from "next/image";
 import LogoImg from "../../../public/logo-png.png"
 import { FormDataAPI } from "@/components/formadm";
 import { TableDatas } from "@/components/tableDatas";
-import { TestFetch } from "@/components/testFetch";
-import { SimpleTest } from "@/components/simpleTest";
+import { DataProvider } from "@/contexts/dataContext";
 
 const schema = z.object({
   login: z.string().min(1, "Login é obrigatório"),
@@ -29,9 +28,7 @@ export default function LoginForm() {
   const [isLogin, setIsLogin] = useState(false);
 
   const onSubmit = (data: FormData) => {
-    console.log("Dados enviados:", data); // Debug
-    console.log("Login digitado:", data.login);
-    console.log("Senha digitada:", data.senha);
+
     
     if (data.login === "jc2025" && data.senha === "jc2025") {
       setIsLogin(true);
@@ -45,12 +42,12 @@ export default function LoginForm() {
     <div className="bg-gray-800 h-screen">
     <div className="flex justify-center items-center  ">
       {isLogin ? (
-        <div className="flex flex-col gap-20 p-20 bg-gray-800 w-full">
-        <FormDataAPI/>
-        <SimpleTest/>
-        <TestFetch/>
-        <TableDatas/>
-        </div>
+        <DataProvider>
+          <div className="flex flex-col gap-20 p-20 bg-gray-800 w-full">
+          <FormDataAPI/>
+          <TableDatas/>
+          </div>
+        </DataProvider>
       ) : (
         <>
        <div className=" w-[20rem] mt-10 p-6 border rounded-lg shadow-lg ">
