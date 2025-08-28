@@ -2,12 +2,14 @@ import { FastifyInstance } from "fastify";
 import { prismaClient } from "../prisma";
 import { z } from "zod";
 
+// Fix: linkbuy field now accepts null values
+
 const dataSchema = z.object({
     day: z.string(),
     month: z.string(),
     location: z.string(),
     city: z.string(),
-    linkbuy: z.string().optional(),
+    linkbuy: z.string().optional().nullable(),
 });
 
 export const datasRoutes = async (app: FastifyInstance) => {

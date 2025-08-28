@@ -5,8 +5,10 @@ import * as z from "zod";
 import { useState } from "react";
 import Image from "next/image";
 import LogoImg from "../../../public/logo-png.png"
-import FormDataAPI from "@/components/formadm";
+import { FormDataAPI } from "@/components/formadm";
 import { TableDatas } from "@/components/tableDatas";
+import { TestFetch } from "@/components/testFetch";
+import { SimpleTest } from "@/components/simpleTest";
 
 const schema = z.object({
   login: z.string().min(1, "Login é obrigatório"),
@@ -45,6 +47,8 @@ export default function LoginForm() {
       {isLogin ? (
         <div className="flex flex-col gap-20 p-20 bg-gray-800 w-full">
         <FormDataAPI/>
+        <SimpleTest/>
+        <TestFetch/>
         <TableDatas/>
         </div>
       ) : (

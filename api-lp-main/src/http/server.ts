@@ -8,6 +8,13 @@ const app = fastify({
     logger: true
 });
 
+// Registrar plugin CORS
+app.register(require('@fastify/cors'), {
+    origin: ['http://localhost:3001', 'http://127.0.0.1:3001'],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+}); // Restart trigger - Force restart after port cleanup
+
 // Registro das rotas
 app.register(datasRoutes, {
     prefix: "/api",
