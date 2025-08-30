@@ -28,7 +28,7 @@ export const DePlay = () => {
           <div className="block sm:hidden ">
             <div>
               <iframe
-                src="https://open.spotify.com/embed/track/2vaXlOGjcPdvZnnrc2mCpO?utm_source=generator"
+                src="https://open.spotify.com/embed/track/02QfhXVtcKdvm5aY0lygIM?utm_source=generator"
                 width="350"
                 height="352"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -101,7 +101,7 @@ export const DePlay = () => {
           <div className="hidden sm:block  ">
             <div>
               <iframe
-                src="https://open.spotify.com/embed/track/2vaXlOGjcPdvZnnrc2mCpO?utm_source=generator"
+                src="https://open.spotify.com/embed/track/02QfhXVtcKdvm5aY0lygIM?utm_source=generator"
                 width="650"
                 height="352"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

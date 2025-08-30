@@ -5,10 +5,10 @@ import ohana from "../../public/ohana.png";
 export const Calendar = () => {
   return (
     <>
-      {/* Mobile */}
-      <div className="block sm:hidden ">
+      {/* Mobile & Tablet */}
+      <div className="block lg:hidden">
         <div
-          className="w-[376px] h-[930px] "
+          className="w-full min-h-[930px] md:min-h-[1080px]"
           style={{
             backgroundImage: 'url("/agendaMobile.png")',
             backgroundSize: "cover",
@@ -16,8 +16,8 @@ export const Calendar = () => {
           }}
           id="agenda"
         >
-          <div className="flex flex-col items-center justify-center mt-[-120px]">
-            <h1 className=" text-[4rem] lg:text-[8rem] xl:text-[8rem] 2xl:text-[8rem] font-albert mt-[10rem] font-extrabold  ">
+          <div className="flex flex-col items-center justify-center pt-20 md:pt-32">
+            <h1 className="text-[3rem] md:text-[5rem] font-albert font-extrabold text-white mb-8">
               AGENDA
             </h1>
 
@@ -27,7 +27,7 @@ export const Calendar = () => {
       </div>
 
       {/* DESKTOP */}
-      <div className="hidden sm:block  ">
+      <div className="hidden lg:block">
         <div
           className="w-full h-[1080px] mt-[-11rem]"
           style={{

@@ -6,7 +6,11 @@ interface VideoData {
   link: string;
 }
 
-const API_BASE_URL = 'http://localhost:3000/api';
+// Dados mockados com o vídeo fornecido
+const MOCK_VIDEO_DATA: VideoData = {
+  id: 1,
+  link: 'https://www.youtube.com/watch?v=yN_6bgszTjo'
+};
 
 export const LastVideo = () => {
   const [videoLink, setVideoLink] = useState<string>('');
@@ -27,25 +31,20 @@ export const LastVideo = () => {
   };
 
   useEffect(() => {
-    const fetchVideoLink = async () => {
+    // Simula carregamento dos dados mockados
+    const loadMockData = () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/link`);
-        if (!response.ok) {
-          throw new Error('Falha ao carregar vídeo');
-        }
-        const data: VideoData = await response.json();
-        if (data && data.link) {
-          setVideoLink(data.link);
-        }
+        setVideoLink(MOCK_VIDEO_DATA.link);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Erro desconhecido');
-        console.error('Erro ao buscar vídeo:', err);
+        console.error('Erro ao carregar vídeo:', err);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchVideoLink();
+    // Simula um pequeno delay para mostrar o loading
+    setTimeout(loadMockData, 500);
   }, []);
 
   if (loading) {

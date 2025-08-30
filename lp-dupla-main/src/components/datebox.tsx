@@ -1,87 +1,38 @@
 'use client'
-import { useState, useEffect } from 'react';
-
-interface EventData {
-  id: number;
-  day: string;
-  month: string;
-  location: string;
-  city: string;
-  linkbuy?: string;
-}
-
-const API_BASE_URL = 'http://localhost:3000/api';
+import { useData } from '../contexts/dataContext';
 
 export const Datebox = () => {
-  const [events, setEvents] = useState<EventData[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const response = await fetch(`${API_BASE_URL}/data`);
-        if (!response.ok) {
-          throw new Error('Falha ao carregar eventos');
-        }
-        const data = await response.json();
-        setEvents(data);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Erro desconhecido');
-        console.error('Erro ao buscar eventos:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchEvents();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center p-8">
-        <div className="text-white text-lg">Carregando eventos...</div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="flex justify-center items-center p-8">
-        <div className="text-red-500 text-lg">Erro: {error}</div>
-      </div>
-    );
-  }
+  const { events } = useData();
 
   return (
     <>
-      {/* MOBILE */}
-      <div className="block sm:hidden ">
-        <div className="flex flex-col items-center gap-10 mt-10">
+      {/* MOBILE & TABLET */}
+      <div className="block lg:hidden">
+        <div className="flex flex-col items-center gap-6 md:gap-8 mt-10 px-4">
           {events.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col gap-1 w-[20rem] p-4 border border-gray-300 rounded-lg"
+              className="flex flex-col gap-2 w-full max-w-[20rem] md:max-w-[24rem] p-4 md:p-6 border border-gray-300 rounded-lg bg-black/20 backdrop-blur-sm"
             >
-              <span className="text-2xl font-bold">
+              <span className="text-xl md:text-2xl font-bold text-white">
                 {item.day} {item.month}
               </span>
-              <span className="text-sm font-bold">{item.location}</span>
-              <span className="text-base font-normal">{item.city}</span>
+              <span className="text-sm md:text-base font-bold text-white">{item.location}</span>
+              <span className="text-sm md:text-base font-normal text-gray-200">{item.city}</span>
               {item.linkbuy ? (
                 <a href={item.linkbuy} target="_blank" rel="noopener noreferrer">
                   <button
-                    className="mt-2 bg-transparent border border-white rounded-lg font-bold px-4 py-2 whitespace-nowrap 
+                    className="mt-2 bg-transparent border border-white rounded-lg font-bold px-4 py-2 md:px-6 md:py-3 text-sm md:text-base
                              transition-all duration-200 ease-in-out hover:bg-gradient-to-r from-blue-500 
-                             via-cyan-300 to-orange-300 hover:border-transparent w-full"
+                             via-cyan-300 to-orange-300 hover:border-transparent w-full text-white"
                   >
                     COMPRAR INGRESSO
                   </button>
                 </a>
               ) : (
                 <button
-                  className="mt-2 bg-gray-500 border border-gray-500 rounded-lg font-bold px-4 py-2 whitespace-nowrap 
-                           cursor-not-allowed w-full"
+                  className="mt-2 bg-gray-500 border border-gray-500 rounded-lg font-bold px-4 py-2 md:px-6 md:py-3 text-sm md:text-base
+                           cursor-not-allowed w-full text-white"
                   disabled
                 >
                   EM BREVE
@@ -92,7 +43,8 @@ export const Datebox = () => {
         </div>
       </div>
 
-      <div className="hidden sm:block  ">
+      {/* DESKTOP */}
+      <div className="hidden lg:block">
         {events.map((item, index) => (
           <div key={index} className="flex flex-col w-[80rem]">
             <div className="flex flex-col items-center w-full gap-1">
