@@ -18,10 +18,10 @@ export const DePlay = () => {
       >
         <div className="flex flex-col items-center justify-center gap-14">
           <div>
-            <h1 className="text-[4rem] font-albert mt-[10rem] font-medium">
+            <h1 className="text-[4rem] font-albert mt-[10rem] font-medium text-white sm:text-black">
               Dê o
             </h1>
-            <h1 className="text-[8rem] italic font-albert mt-[-5.3rem] ml-[2.3rem] font-extrabold">
+            <h1 className="text-[8rem] italic font-albert mt-[-5.3rem] ml-[2.3rem] font-extrabold text-white sm:text-black">
               play
             </h1>
           </div>
