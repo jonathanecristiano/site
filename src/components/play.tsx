@@ -37,7 +37,7 @@ export const DePlay = () => {
               ></iframe>
             </div>
             <div className="flex flex-col items-center justify-center mt-10">
-              <h2 className="text-sm md:text-base tracking-widest uppercase font-medium text-white sm:text-black">
+              <h2 className="text-sm md:text-base tracking-widest uppercase font-medium text-white">
                 Ouça na sua plataforma preferida
               </h2>
 
@@ -111,7 +111,7 @@ export const DePlay = () => {
             </div>
 
             <div className="flex flex-col items-center justify-center mt-10">
-              <h2 className="text-sm md:text-base tracking-widest uppercase font-medium">
+              <h2 className="text-sm md:text-base tracking-widest uppercase font-medium text-black">
                 Ouça na sua plataforma preferida
               </h2>
 
