@@ -1,6 +1,4 @@
 import { Datebox } from "./datebox";
-import Image from "next/image";
-import ohana from "../../public/ohana.png";
 import { getAssetPath } from "@/utils/assets";
 
 export const Calendar = () => {
@@ -52,8 +50,8 @@ export const Calendar = () => {
             >
               <div className="p-2 rounded-xl shadow-lg animate-bounce"
               style={{ animationDuration: "5s" }}>
-              <Image
-              src={ohana}
+              <img
+              src={getAssetPath("/ohana.png")}
               alt="Ohana Music"
               className="h-12 md:h-16 hover:scale-105 transition-all duration-200 rounded-xl"
               width={160}
