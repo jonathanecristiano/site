@@ -39,7 +39,7 @@ export const Calendar = () => {
           id="agenda"
         >
           <div className="flex flex-col items-center justify-center">
-            <h1 className=" text-[4rem] lg:text-[8rem] xl:text-[8rem] 2xl:text-[8rem] font-albert mt-[10rem] font-extrabold mb-0 lg:mb-[6rem] xl:mb-[6rem] 2xl:mb-[6rem]">
+            <h1 className=" text-[4rem] lg:text-[8rem] xl:text-[8rem] 2xl:text-[8rem] font-albert mt-[10rem] font-extrabold mb-0 lg:mb-[6rem] xl:mb-[6rem] 2xl:mb-[6rem] text-black">
               AGENDA
             </h1>
 
