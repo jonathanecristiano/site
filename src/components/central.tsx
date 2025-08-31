@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getAssetPath } from "@/utils/assets";
 
 export const CentralFans = () => {
   return (
@@ -46,7 +47,7 @@ export const CentralFans = () => {
         <div
           className="w-full  h-[700px] lg:h-[1020px] xl:h-[1020px] 2xl:h-[1020px] flex items-center justify-center"
           style={{
-            backgroundImage: 'url("/fans2.0.png")',
+            backgroundImage: `url("${getAssetPath('/fans2.0.png')}")`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}

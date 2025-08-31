@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
+import { getAssetPath } from '@/utils/assets';
 
 interface VideoData {
   id: number;
@@ -55,7 +56,7 @@ export const LastVideo = () => {
           <div
             className="w-full h-[680px]"
             style={{
-              backgroundImage: 'url("/banner03.png")',
+              backgroundImage: `url("${getAssetPath('/banner03.png')}")`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
             }}
@@ -75,7 +76,7 @@ export const LastVideo = () => {
           <div
             className="w-full h-[1080px]"
             style={{
-              backgroundImage: 'url("/banner03.png")',
+              backgroundImage: `url("${getAssetPath('/banner03.png')}")`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
             }}
@@ -102,7 +103,7 @@ export const LastVideo = () => {
           <div
             className="w-full h-[680px]"
             style={{
-              backgroundImage: 'url("/banner03.png")',
+              backgroundImage: `url("${getAssetPath('/banner03.png')}")`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
             }}
@@ -124,7 +125,7 @@ export const LastVideo = () => {
           <div
             className="w-full h-[1080px]"
             style={{
-              backgroundImage: 'url("/banner03.png")',
+              backgroundImage: `url("${getAssetPath('/banner03.png')}")`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
             }}
@@ -152,7 +153,7 @@ export const LastVideo = () => {
         <div
           className="w-full h-[680px]"
           style={{
-            backgroundImage: 'url("/banner03.png")',
+            backgroundImage: `url("${getAssetPath('/banner03.png')}")`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
@@ -178,7 +179,7 @@ export const LastVideo = () => {
         <div
           className="w-full h-[1080px]"
           style={{
-            backgroundImage: 'url("/banner03.png")',
+            backgroundImage: `url("${getAssetPath('/banner03.png')}")`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}

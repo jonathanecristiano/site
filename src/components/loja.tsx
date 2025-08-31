@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ImgCamisa from "../../public/camisa.png";
 import Link from "next/link";
+import { getAssetPath } from "@/utils/assets";
 
 export const LojaVirtual = () => {
   return (
@@ -8,7 +9,7 @@ export const LojaVirtual = () => {
       <div
         className="w-full  h-[700px] lg:h-[1080px] xl:h-[1080px] 2xl:h-[1080px]  flex items-center justify-center"
         style={{
-          backgroundImage: 'url("/new/loja-oficial.png")',
+          backgroundImage: `url("${getAssetPath('/new/loja-oficial.png')}")`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}

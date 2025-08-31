@@ -1,6 +1,7 @@
 import { Datebox } from "./datebox";
 import Image from "next/image";
 import ohana from "../../public/ohana.png";
+import { getAssetPath } from "@/utils/assets";
 
 export const Calendar = () => {
   return (
@@ -31,7 +32,7 @@ export const Calendar = () => {
         <div
           className="w-full h-[1080px] mt-[-11rem]"
           style={{
-            backgroundImage: 'url("/banner02.png")',
+            backgroundImage: `url("${getAssetPath('/banner02.png')}")`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}

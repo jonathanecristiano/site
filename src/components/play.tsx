@@ -3,6 +3,7 @@ import appleMusic from "../../public/play1.png";
 import deezerMusic from "../../public/play2.png";
 import youMusic from "../../public/play3.png";
 import spotyMusic from "../../public/play4.png";
+import { getAssetPath } from "@/utils/assets";
 
 export const DePlay = () => {
   return (
@@ -10,7 +11,7 @@ export const DePlay = () => {
       <div
         className=" w-[100%] h-[1080px]  "
         style={{
-          backgroundImage: 'url("/banner04.png")',
+          backgroundImage: `url("${getAssetPath('/banner04.png')}")`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
@@ -115,7 +116,7 @@ export const DePlay = () => {
               </h2>
 
               <Image
-                src="/new/musicas.png"
+                src={getAssetPath("/new/musicas.png")}
                 alt="Músicas"
                 width={700}
                 height={175}

@@ -1,3 +1,5 @@
+import { getAssetPath } from "@/utils/assets";
+
 export const Footer = () => {
   return (
     <>
@@ -52,7 +54,7 @@ export const Footer = () => {
         <div
           className="w-full h-[900px]  flex items-center justify-center"
           style={{
-            backgroundImage: 'url("/new/fale-com-a-gente.png")',
+            backgroundImage: `url("${getAssetPath('/new/fale-com-a-gente.png')}")`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
