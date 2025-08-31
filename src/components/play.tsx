@@ -36,61 +36,13 @@ export const DePlay = () => {
                 Ouça na sua plataforma preferida
               </h2>
 
-              <div className="grid grid-cols-2 gap-10 mt-10 ">
-                <a
-                  href="https://music.apple.com/br/artist/jonatha-e-cristiano/1513255712 "
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={getAssetPath("/play1.png")}
-                    alt="Apple Music"
-                    className="h-8 md:h-10 hover:opacity-80 transition"
-                    width={120}
-                    height={80}
-                  />
-                </a>
-                <a
-                  href="https://www.deezer.com/br/artist/94765012?host=6441068301&utm_campaign=clipboard-generic&utm_source=user_sharing&utm_content=artist-94765012&deferredFl=1
-"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={getAssetPath("/play2.png")}
-                    alt="Deezer"
-                    className="h-8 md:h-10 hover:opacity-80 transition"
-                    width={120}
-                    height={50}
-                  />
-                </a>
-                <a
-                  href="https://music.youtube.com/channel/UC19SG-Lazq5XXXZd-bozGBA?si=Li6v-OopTru1t9A6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={getAssetPath("/play3.png")}
-                    alt="YouTube Music"
-                    className="h-8 md:h-10 hover:opacity-80 transition"
-                    width={120}
-                    height={50}
-                  />
-                </a>
-                <a
-                  href="https://open.spotify.com/intl-pt/artist/4ZIYJpELcoJlJcro8xZF20?si=vPNamsHASFK8v642rumOjA&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Fartist%2F4ZIYJpELcoJlJcro8xZF20%3Fsi%3DvPNamsHASFK8v642rumOjA&feature=organic&_branch_match_id=1457099183272951017&_branch_referrer=H4sIAAAAAAAAA72NywrCMBREvyZdtpqWIkKRohatooIr3UgaUxub5oabxMfGb7cK%2FoIwi2EOh2mcM3YcRdaAk%2FUzZMaESuo2mhiEs%2BcuAyN0QGhSe6VOHlXWfBQS54QWfT44%2FNkcun5i6KR1fUmOy0Np5msOpSo5wuhxLOiAxIWVJJ7ddhvW2UW%2BL1ajW5pQ9N32mn%2BvmFIV4%2B0f7ghN9bmnw6AWzHkUGeCFacmDF4paIEp9OVUIdyswmzYInXgDu9G5cDMBAAA%3D"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={getAssetPath("/play4.png")}
-                    alt="Spotify"
-                    className="h-8 md:h-10 hover:opacity-80 transition"
-                    width={120}
-                    height={50}
-                  />
-                </a>
-              </div>
+              <img
+                src={getAssetPath("/new/musicas.png?v=1")}
+                alt="Músicas"
+                width={700}
+                height={175}
+                className="my-8 hover:opacity-80 transition-opacity duration-300 rounded-lg shadow-md w-[280px] h-auto"
+              />
             </div>
           </div>
           {/* Desktop */}
@@ -115,7 +67,7 @@ export const DePlay = () => {
                 alt="Músicas"
                 width={700}
                 height={175}
-                className="my-8 hover:opacity-80 transition-opacity duration-300 rounded-lg shadow-md"
+                className="my-8 hover:opacity-80 transition-opacity duration-300 rounded-lg shadow-md w-[400px] sm:w-[500px] md:w-[600px] lg:w-[700px] h-auto"
               />
             </div>
           </div>

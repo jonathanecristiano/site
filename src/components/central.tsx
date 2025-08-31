@@ -15,7 +15,7 @@ export const CentralFans = () => {
           id="fans"
         >
           <div className="flex flex-col w-full max-w-[1200px] m-auto px-4 sm:px-6">
-            <div className="flex flex-col sm:flex-row items-center mt-[-20rem]">
+            <div className="flex flex-col sm:flex-row items-center mt-[-8rem]">
               <div className="text-center sm:text-left">
                 <div className="flex flex-col items-center sm:items-start">
                   <span className="font-albert text-white text-[1.8rem] sm:text-[2rem] mb-[2rem]">

@@ -44,7 +44,7 @@ export default function Home() {
             quality={100}
             priority
             placeholder="blur"
-            className="w-screen h-screen object-cover"
+            className="w-screen h-[80vh] object-cover"
           />
           
           {/* Logo sobreposta - Mobile */}
