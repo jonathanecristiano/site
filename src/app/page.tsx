@@ -1,7 +1,6 @@
 "use client";
 // import { Header } from "@/components/header";
 import ImgInital from "../../public/new/home.png";
-import ImgInitalMobile from "../../public/Group5.png";
 import LinhaImg from "../../public/linha.png";
 import LogoImg from "../../public/logo.png";
 import Image from "next/image";
@@ -39,13 +38,13 @@ export default function Home() {
 
           <Image
             alt="Fundo Mobile"
-            src={ImgInitalMobile}
+            src={ImgInital}
             width={400}
             height={780}
             quality={100}
             priority
             placeholder="blur"
-            className="w-[760px] h-full object-cover"
+            className="w-screen h-screen object-cover"
           />
           
           {/* Logo sobreposta - Mobile */}

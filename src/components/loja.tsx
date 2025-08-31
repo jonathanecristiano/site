@@ -12,6 +12,7 @@ export const LojaVirtual = () => {
           backgroundImage: `url("${getAssetPath('/new/loja-oficial.png')}")`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          backgroundPosition: "center center",
         }}
         id="loja"
       >
