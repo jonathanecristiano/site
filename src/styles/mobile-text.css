@@ -1,0 +1,20 @@
+/* Mobile text styles for better cross-device compatibility */
+@media (max-width: 1023px) {
+  .mobile-text-white {
+    color: white !important;
+  }
+  
+  .mobile-title-white {
+    color: white !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktop-text-black {
+    color: black !important;
+  }
+  
+  .desktop-title-black {
+    color: black !important;
+  }
+}

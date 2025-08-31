@@ -62,7 +62,7 @@ export const LastVideo = () => {
             }}
           >
             <div className="flex flex-col items-center justify-center gap-14">
-              <h1 className=" text-[2.3rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[4rem] font-albert mt-[10rem] font-extrabold text-white">
+              <h1 className="text-[2.3rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[4rem] font-albert mt-[10rem] font-extrabold text-white lg:!text-black">
                 Último lançamento
               </h1>
               <div className="w-[360px] h-[215px] flex items-center justify-center bg-gray-800 rounded-lg">
@@ -109,7 +109,7 @@ export const LastVideo = () => {
             }}
           >
             <div className="flex flex-col items-center justify-center gap-14">
-              <h1 className=" text-[2.3rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[4rem] font-albert mt-[10rem] font-extrabold text-white">
+              <h1 className="text-[2.3rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[4rem] font-albert mt-[10rem] font-extrabold text-white lg:!text-black">
                 Último lançamento
               </h1>
               <div className="w-[360px] h-[215px] flex items-center justify-center bg-gray-800 rounded-lg">
@@ -159,7 +159,7 @@ export const LastVideo = () => {
           }}
         >
           <div className="flex flex-col items-center justify-center gap-14">
-            <h1 className=" text-[2.3rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[4rem] font-albert mt-[10rem] font-extrabold text-white">
+            <h1 className="text-[2.3rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[4rem] font-albert mt-[10rem] font-extrabold text-white lg:!text-black">
               Último lançamento
             </h1>
             <div>

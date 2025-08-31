@@ -18,10 +18,10 @@ export const DePlay = () => {
       >
         <div className="flex flex-col items-center justify-center gap-14">
           <div>
-            <h1 className="text-[4rem] font-albert mt-[10rem] font-medium text-white sm:text-black">
+            <h1 className="text-[4rem] font-albert mt-[10rem] font-medium text-white lg:!text-black">
               Dê o
             </h1>
-            <h1 className="text-[8rem] italic font-albert mt-[-5.3rem] ml-[2.3rem] font-extrabold text-white sm:text-black">
+            <h1 className="text-[8rem] italic font-albert mt-[-5.3rem] ml-[2.3rem] font-extrabold text-white lg:!text-black">
               play
             </h1>
           </div>
@@ -37,7 +37,7 @@ export const DePlay = () => {
               ></iframe>
             </div>
             <div className="flex flex-col items-center justify-center mt-10">
-              <h2 className="text-sm md:text-base tracking-widest uppercase font-medium text-white">
+              <h2 className="text-sm md:text-base tracking-widest uppercase font-medium text-white lg:!text-black">
                 Ouça na sua plataforma preferida
               </h2>
 
