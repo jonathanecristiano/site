@@ -111,7 +111,7 @@ export const DePlay = () => {
               </h2>
 
               <img
-                src={getAssetPath("/new/musicas.png")}
+                src={getAssetPath("/new/musicas.png?v=1")}
                 alt="Músicas"
                 width={700}
                 height={175}
