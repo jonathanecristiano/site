@@ -8,6 +8,7 @@ import IconTikTok from "../../public/tik-tok.png";
 import Logo from "../../public/logo.png";
 import { FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
+import { getAssetPath } from "@/utils/assets";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +64,7 @@ export const Header = () => {
       {/* Menu Mobile */}
       {isOpen && (
         <nav className="absolute top-0 left-0 w-full h-screen bg-black flex flex-col items-center justify-center gap-6 md:hidden z-40">
-          <Link href={"./MÍDIAKIT2025.pdf"} target="_blank">
+          <Link href={getAssetPath("/MÍDIAKIT2025.pdf")} target="_blank">
             <span className="text-white uppercase font-semibold text-xl hover:text-gray-400 cursor-pointer">
               MIDIA KIT
             </span>
@@ -102,7 +103,7 @@ export const Header = () => {
           <Image alt="Logo" src={Logo} width={220} height={50} />
         </div>
 
-        <Link href={"./MÍDIAKIT2025.pdf"} target="_blank">
+        <Link href={getAssetPath("/MÍDIAKIT2025.pdf")} target="_blank">
           <span className="text-gray-400 uppercase font-semibold hover:text-white cursor-pointer">
             MIDIA KIT
           </span>

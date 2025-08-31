@@ -8,7 +8,7 @@ export const CentralFans = () => {
         <div
           className="w-full  h-[760px] lg:h-[1020px] xl:h-[1020px] 2xl:h-[1020px] flex items-center justify-center"
           style={{
-            backgroundImage: 'url("/fanMobile.png")',
+            backgroundImage: `url("${getAssetPath('/fanMobile.png')}")`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}

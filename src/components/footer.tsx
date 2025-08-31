@@ -7,7 +7,7 @@ export const Footer = () => {
         <div
           className="w-full h-[800px] flex items-center justify-center"
           style={{
-            backgroundImage: 'url("/footerMobile.png")',
+            backgroundImage: `url("${getAssetPath('/footerMobile.png')}")`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}

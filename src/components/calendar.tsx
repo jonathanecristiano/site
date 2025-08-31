@@ -11,7 +11,7 @@ export const Calendar = () => {
         <div
           className="w-full min-h-[930px] md:min-h-[1080px]"
           style={{
-            backgroundImage: 'url("/agendaMobile.png")',
+            backgroundImage: `url("${getAssetPath('/agendaMobile.png')}")`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
