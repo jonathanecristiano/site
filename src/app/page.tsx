@@ -40,7 +40,7 @@ export default function Home() {
             alt="Fundo Mobile"
             src={ImgInital}
             width={400}
-            height={780}
+            height={580}
             quality={100}
             priority
             placeholder="blur"
