@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getAssetPath } from "@/utils/assets";
 
 export const DePlay = () => {
@@ -43,7 +42,7 @@ export const DePlay = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <img
                     src={getAssetPath("/play1.png")}
                     alt="Apple Music"
                     className="h-8 md:h-10 hover:opacity-80 transition"
@@ -57,7 +56,7 @@ export const DePlay = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <img
                     src={getAssetPath("/play2.png")}
                     alt="Deezer"
                     className="h-8 md:h-10 hover:opacity-80 transition"
@@ -70,7 +69,7 @@ export const DePlay = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <img
                     src={getAssetPath("/play3.png")}
                     alt="YouTube Music"
                     className="h-8 md:h-10 hover:opacity-80 transition"
@@ -83,7 +82,7 @@ export const DePlay = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <img
                     src={getAssetPath("/play4.png")}
                     alt="Spotify"
                     className="h-8 md:h-10 hover:opacity-80 transition"
@@ -111,7 +110,7 @@ export const DePlay = () => {
                 Ouça na sua plataforma preferida
               </h2>
 
-              <Image
+              <img
                 src={getAssetPath("/new/musicas.png")}
                 alt="Músicas"
                 width={700}
